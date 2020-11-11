@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>20201111 실습</title>
+        <style>
+            .firstDiv{
+                width: 100px;
+                height: 100px;
+                background-color: beige;
+                padding: 20px;
+                overflow: hidden;
+                /*overflow= 자신의 박스 밖으로 넘어가면 자르겠다*/
+                white-space: nowrap;    /*줄바꿈이 일어나지않고 줄밖으로 넘어감*/
+                text-overflow: ellipsis;    /*ellipsis= '...' 줄임표시
+            }
+            li{
+                /* list-style-type: disc; */
+                padding-left: 1rem;
+                text-indent: -0.7rem;
+            }
+            li::before{
+                content: "😊";
+            }
+            .test{
+                width: 100px;
+                height: 100px;
+                background-color: rgba(34, 92, 155, 0.7);
+                background: 
+                linear-gradient(
+                    45deg,
+                     #333333 33%, 
+                     #999999 66%, 
+                     #ffffff 100%
+                     );
+            }
+            p{
+                background-color: hsl(30, 100, 34);
+            }
+
+            .divPuppy{
+                width: 300px;
+                height: 300px;
+                background-image: url(https://www.dogtime.com/assets/uploads/2016/09/beagle-puppy-5-e1568913038666.jpg);
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-size:contain;
+            }
+
+            body{
+                background-color: rgb(212, 211, 211);
+                margin: 0;
+                padding: 0;
+            }
+
+            .a{
+                width: 100px;
+                height: 100px;
+                background-color: #dddddd;
+                padding: 20px;
+                box-sizing: border-box;
+                border: 3px dashed red;
+                margin: 20px;
+                overflow: hidden;
+            }
+
+            .b{
+                width: 100%;    /* =50px */
+                height: 100%;
+                padding: 20px;
+                background-color: black;    /*contents 영역만큼 차지*/
+            }
+
+            .c{
+                width: 100px;
+                height: 100px;
+                background-color: darkgreen;
+            }
+
+            .block-box{
+                width: 100%;
+                height: 30px;
+                background-color: #0071cf;
+            }
+
+            .inline-box{
+
+            }
+
+            .box{
+                width: 100px;
+                height: 100px;
+                /* display: inline; */
+                /* 컨텐츠를 안적고 inline하면 박스 자체가 사라짐 */
+                display: inline-block;
+            }
+            .a1{background-color: red;}
+            .b1{background-color: green;}
+            .c1{background-color: blue;}
+
+            .l1{background-color: red;}
+            .l2{background-color: green;}
+            .l3{background-color: blue;}
+
+            img{
+                border: 10px solid black;      
+            }
+
+            .boxSecond{
+                width: 100px;
+                height: 100px;
+                background-color: grey;
+                border-style: solid;
+                border-width: 10px;
+                border-color: rosybrown;
+                border: 3px solid rosybrown;
+                border-radius: 20px;
+                border-radius: 1px 20px 10px 40px;
+                padding: 20px;
+                margin: 100px;
+                box-sizing: border-box;
+            }
+            /*
+            100px + 20px + 20px + 3px + 3px
+            */
+
+            .boxs{
+                width: 300px;
+                height: 300px;
+                margin: 10px;
+                padding: 20px;
+                border: 3px solid tomato;
+            }
+
+            .content-box{
+                background-color: #496eb3;
+                box-sizing: content-box;
+            }
+
+            
+            .border-box{
+                background-color: teal;
+                box-sizing: content-box;
+            }
+            .container{
+                position: absolute;
+                width: 50%;
+                background-color: black;
+            }
+
+            .boxb{
+                width: 100px;
+                height: 100px;
+                box-sizing: border-box;
+
+            }
+
+            .red{background-color: red;}
+            .blue{background-color: blue;}
+            .green{background-color: green;}
+            .yellowgreen{background-color: yellowgreen;}
+
+            .box-left{
+                float: left;
+            }
+            
+            .box-right{
+                float: right;
+            }
+                
+        </style>
+    </head>
+    <body>
+        <div class="firstDiv">
+            ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+        </div>
+        <ul>
+            <li>ㅇㅇㅇㅇ1</li>
+            <li>ㅇㅇㅇㅇ2</li>
+            <li>ㅇㅇㅇㅇ3</li>
+            <li>ㅇㅇㅇㅇ4</li>
+        </ul>
+        <input type="color">
+        <p>
+            폰트테스트
+        </p>
+        <div class="test">
+        </div>
+        <br>
+        <div class="divPuppy">
+        </div>
+
+        <div class="a">
+            <div class="b">
+                <div class="c"></div>
+            </div>
+        </div>
+
+        <div class="block-box">블록</div>
+        <p>
+            <span class="inline-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum vehicula odio id efficitur. Nam eu pharetra nisl. Proin placerat egestas est, at molestie eros feugiat non. Etiam vehicula eget enim non venenatis. Donec a nisi massa. Nunc auctor urna justo, ac ultricies lacus faucibus vulputate. Ut pharetra enim velit, et efficitur massa fermentum id. Nunc tincidunt dui quis fringilla pretium. Sed quis quam nisi. Fusce eu erat magna. Nam sit amet tellus non felis molestie rutrum non id magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit bibendum ante a tincidunt. Nulla eu magna sed enim tincidunt placerat non nec mi.</span>
+        </p>
+
+        <div class="box a1">a1</div>
+        <div class="box b1">b1</div>
+        <div class="box c1">c1</div>
+
+        <span class="l1">글자1</span>
+        <span class="l2">글자2</span>
+        <span class="l3">글자3</span><br>
+        <br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQXniAavREUJu-9Ag7cDQihNJbmRSWtElFfsw&usqp=CAU" alt="강아지들">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQXniAavREUJu-9Ag7cDQihNJbmRSWtElFfsw&usqp=CAU" alt="강아지들">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQXniAavREUJu-9Ag7cDQihNJbmRSWtElFfsw&usqp=CAU" alt="강아지들">
+
+        <div class="boxSecond"></div>
+
+        <div class="boxs content-box"></div>
+        <div class="boxs border-box"></div>
+
+        <div class="container">
+            <div class="boxb box-left red"></div>
+            <div class="boxb box-left blue"></div>
+            <div class="boxb box-left green"></div>
+            <div class="boxb box-right yellowgreen"></div>
+        </div>
+    </body>
+</html>
