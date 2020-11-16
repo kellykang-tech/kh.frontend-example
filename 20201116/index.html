@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>브라우저 제어하기</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.2/purify.min.js" integrity="sha512-T6jx0SL5artICbQxeQCg3iToWGEuWM6P2XjNxP1vMI6fNtgIb3dnVD5gpd/pkQKoMfi1ygq5ezv/Z2VB3lLGtw==" crossorigin="anonymous"></script>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+            }
+            .b1 {background-color: coral;}
+            .b2 {background-color: cornflowerblue;}
+            .b3 {background-color: goldenrod;}
+
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: cornflowerblue;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function handleClick(){
+                alert('클릭했음')
+            }
+            const box = document.querySelector('#boxbox')
+            box.onclick = () => {
+                alert('triggered')
+            }
+
+            const box = document.querySelector('#boxbox')
+            box.addEventListener('click', () => {
+                alert('hi')
+            })
+
+            
+        </script>
+        <div class ="box b1">box1</div>
+        <div class ="box b2">box2</div>
+        <div class ="box b3">box3</div>
+
+        <div class ="box">._.</div>
+        <div class ="box">'_'</div>
+        <ul id="root">
+            <li>1뎁스 - 1</li>
+            <li>1뎁스 - 2</li>
+            <li>1뎁스 - 3</li>
+            <li>1뎁스 - 4</li>
+            <ul>
+                <li>2뎁스 - 1</li>
+                <li>2뎁스 - 2</li>
+                <ul>
+                    <li>3뎁스 - 1</li>
+                    <li>3뎁스 - 2</li>
+                    <li>3뎁스 - 3</li>
+                    <ul>
+                        <li>4뎁스 - 1</li>
+                        <li>4뎁스 - 2</li>
+                        <li>4뎁스 - 3</li>
+                    </ul>
+                </ul>
+            </ul>
+            <li>1뎁스 - 5</li>
+            <ul>
+                <li>2뎁스</li>
+            </ul>
+        </ul>
+    </body>
+</html>
