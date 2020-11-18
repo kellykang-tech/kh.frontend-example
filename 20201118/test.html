@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pinterest 회원가입 만들기</title>
+        <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            html, body {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                text-align: center;
+            }
+            /* 전역 변수 설정 끝 */
+
+            .form-container {
+                /* position: relative; */
+                max-width: 400px;
+                height: 150vh;
+                margin: 0 auto;
+                padding: 10px 40px 100px 40px;
+            }
+
+            .sign-up-header {
+                text-align: center;
+            }
+             .logo-box > img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .form-box-field {
+                margin-bottom: 8px;
+            }
+
+            .sign-up-field > p {
+                margin: 10px;
+                font-weight: bold;
+            }
+
+            .form-box-field > .warn-info {
+                margin-top: 0.5rem;
+                font-size: 0.8rem;
+                color: red;
+                display: none;
+                text-align: left;
+            }
+
+            .form-box-field.warn > .warn-info {
+                display: block;
+            }
+
+            .form-box-field-input {
+                width: 100%;
+                height: 45px;
+                border: 1px solid rgb(209, 206, 206);
+                border-radius: 15px;
+                text-indent: 10px;
+            }
+
+            .sign-up-continue {
+                width: 100%;
+                height: 40px;
+                line-height: 30px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 20px;
+                margin: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .box1 {
+                background-color:rgb(230, 0, 35); 
+            }
+            .box1 > a {
+                color: white;
+            }
+            .box2 {
+                background-color:rgba(0, 98, 255, 0.76);
+            }
+            .box2 > a {
+                color: white;
+            }
+
+            .box3 {
+                background-color: rgb(235, 235, 235);
+            }
+            
+            .etc-terms > p {
+                font-size: 0.8rem;
+                margin: 10px;
+                line-height: 18px;
+            }
+            .etc-sign-in > p {
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+
+            .footer {
+                /* position: absolute; */
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                background-color: rgba(224, 224, 224, 0.931);
+                font-weight: bold;
+                line-height: 65px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <header class="sign-up-header">
+                <div class="logo-box">
+                    <img src="https://i.pinimg.com/originals/13/92/78/1392789bb3f55cf846c5782a370ea188.png">
+                </div>
+                <h1>Pinterest에 오신 것을 환영합니다.</h1>
+                <h4>시도해 볼 만한 새로운 아이디어 찾기</h4>
+            </header>
+            <main>
+                <form class="form-box">
+                    <div class="form-box-field warn">
+                        <input 
+                            class="form-box-field-input"
+                            type="text"
+                            placeholder="이메일"
+                        />
+                        <p class="warn-info">올바른 이메일 주소가 아닙니다.</p>
+                    </div>
+                    <div class="form-box-field">
+                        <input 
+                            class="form-box-field-input"
+                            type="password"
+                            placeholder="비밀번호를 입력하세요"
+                        />
+                    </div>
+                    <div class="form-box-field">
+                        <input 
+                            class="form-box-field-input"
+                            type="text"
+                            placeholder="나이"
+                        />
+                    </div>
+                    <div class="sign-up-field">
+                        <div class="sign-up-continue box1">
+                            <a href="">계속하기</a>
+                        </div>
+                        <p>또는</p>
+                        <div class ="sign-up-continue box2">
+                            <img src="" alt="">
+                            <a href="">Facebook으로 계속하기</a>
+                        </div>
+                        <div class ="sign-up-continue box3">
+                           <img src="" alt="">
+                            <a href="">Google로 계속하기</a>
+                        </div>
+                    </div>
+
+                    <div class="etc">
+                        <div class="etc-terms">
+                            <p>계속 진행하면 Pinterest의 <a href="">서비스 약관,개인정보 보호정책</a>에 동의한 것으로 간주됩니다.</p>
+                        </div>
+                        <div class="etc-sign-in">
+                            <p>이미 회원이신가요? 로그인하기</p>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+                <footer>
+                    <div class="footer">
+                        <p>Business 계정 만들기</p>
+                    </div>
+                </footer>
+    </body>
+</html>
