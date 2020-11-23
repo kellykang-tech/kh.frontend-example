@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pinterest Sign Up Form</title>
+        <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            html, body {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+            }
+            /* =========== 전역 변수 설정 끝 ============*/
+
+            .form-container {
+                max-width: 400px;
+                height: 100%;
+                margin: auto;
+                padding: 10px 40px 100px 40px;
+            }
+
+            .sign-up-header {
+                text-align: center;
+            }
+
+            .sign-up-header > h1 {
+                margin-bottom: 0;
+            }
+            .sign-up-header > h4 {
+                margin: 5px 0 30px 0;
+                font-size: 13px;
+                font-weight: lighter;
+            }
+             .logo-box > img {
+                width: 50px;
+                height: 50px;
+            }
+            /* ===== ===== header부분 끝 ===== =====  */
+
+            .form-box-field {
+                margin-bottom: 8px;
+            }
+
+            .sign-up-field, .etc {
+                text-align: center;
+            }
+
+            .sign-up-field > p {
+                margin: 10px 0;
+                font-weight: bold;
+            }
+
+            .form-box-field > .warn-info {
+                margin-top: 0.5rem;
+                font-size: 0.8rem;
+                color: red;
+                display: none;
+                text-align: left;
+            }
+
+            .form-box-field.warn > .warn-info {
+                display: block;
+            }
+
+            .form-box-field-input {
+                width: 100%;
+                height: 45px;
+                border: 1px solid rgb(209, 206, 206);
+                border-radius: 15px;
+                text-indent: 10px;
+                outline: none;
+            }
+
+            .form-box-field > .form-box-field-input:focus {
+                border-color: #5dd6f5;
+                border-width: 3.8px;
+                transition: border 0 ease-in-out;
+            }
+           
+            .sign-up-continue {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                display: inline-block;
+                border-radius: 20px;
+                margin: 10px 0;
+            }
+
+
+            .box1 {
+                background-color:rgb(230, 0, 35); 
+            }
+            .box1 > a {
+                color: white;
+            }
+            .box2 {
+                background-color:rgba(0, 98, 255, 0.76);
+            }
+            .box2 > a {
+                color: white;
+            }
+
+            .box3 {
+                background-color: rgb(235, 235, 235);
+            }
+            
+            .etc-terms > p {
+                font-size: 0.8rem;
+                margin: 10px;
+                line-height: 18px;
+            }
+
+            .etc-sign-in > a {
+                font-size: 0.4rem;
+                font-weight: bold;
+            }
+
+            .footer {
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                background-color: rgba(224, 224, 224, 0.931);
+                font-weight: bold;
+                line-height: 65px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <header class="sign-up-header">
+                <div class="logo-box">
+                    <img src="https://i.pinimg.com/originals/13/92/78/1392789bb3f55cf846c5782a370ea188.png">
+                </div>
+                <h1>Pinterest에 오신 것을 환영합니다.</h1>
+                <h4>시도해 볼 만한 새로운 아이디어 찾기</h4>
+            </header>
+            <main>
+                <form class="form-box">
+                    <div class="inform-field">
+                        <div class="form-box-field warn">
+                            <input 
+                                class="form-box-field-input email"
+                                type="text"
+                                placeholder="이메일"
+                            />
+                            <!-- <p class="warn-info">올바른 이메일 주소가 아닙니다.</p> -->
+                        </div>
+                        <div class="form-box-field">
+                            <input 
+                                class="form-box-field-input pwd"
+                                type="password"
+                                placeholder="비밀번호를 입력하세요"
+                            />
+                        </div>
+                        <div class="form-box-field">
+                            <input 
+                                class="form-box-field-input age"
+                                type="text"
+                                placeholder="나이"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="sign-up-field">
+                        <div class="sign-up-continue box1">
+                            <a href="https://www.pinterest.co.kr/">계속하기</a>
+                        </div>
+                        <p>또는</p>
+                        <div class ="sign-up-continue box2">
+                            <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=274266067164&kid_directed_site=0&app_id=274266067164&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fapp_id%3D274266067164%26auth_type%26cbt%3D1605706792838%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df3af0242185d248%2526domain%253Dwww.pinterest.co.kr%2526origin%253Dhttps%25253A%25252F%25252Fwww.pinterest.co.kr%25252Ff3ee4e4fa79bf1%2526relation%253Dopener%26client_id%3D274266067164%26display%3Dpopup%26domain%3Dwww.pinterest.co.kr%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fwww.pinterest.co.kr%252F%26force_confirmation%3Dfalse%26id%3Df161d0f9ef2164c%26locale%3Dko_KR%26logger_id%3D93b68773-b42c-4228-869c-5564f01c68ad%26origin%3D1%26plugin_prepare%3Dtrue%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df3c2fd78c8153e8%2526domain%253Dwww.pinterest.co.kr%2526origin%253Dhttps%25253A%25252F%25252Fwww.pinterest.co.kr%25252Ff3ee4e4fa79bf1%2526relation%253Dopener.parent%2526frame%253Df161d0f9ef2164c%26ref%3DLoginButton%26response_type%3Dsigned_request%252Ctoken%252Cgraph_domain%26scope%3Dpublic_profile%252Cemail%252Cuser_likes%252Cuser_birthday%252Cuser_friends%26sdk%3Djoey%26size%3D%257B%2522width%2522%253A600%252C%2522height%2522%253A679%257D%26url%3Ddialog%252Foauth%26version%3Dv3.2%26ret%3Dlogin%26fbapp_pres%3D0%26shared_id%3DTODO_SHARED_ID&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3c2fd78c8153e8%26domain%3Dwww.pinterest.co.kr%26origin%3Dhttps%253A%252F%252Fwww.pinterest.co.kr%252Ff3ee4e4fa79bf1%26relation%3Dopener.parent%26frame%3Df161d0f9ef2164c%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=ko_KR&pl_dbl=0">Facebook으로 계속하기</a>
+                        </div>
+                        <div class ="sign-up-continue box3">
+                            <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.pinterest.co.kr%3Fid%3Dauth569721&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&client_id=694505692171-31closf3bcmlt59aeulg2j81ej68j6hk.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.pinterest.co.kr&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow">Google로 계속하기</a>
+                        </div>
+                    </div>
+
+                    <div class="etc">
+                        <div class="etc-terms">
+                            <p>계속 진행하면 Pinterest의 <a href="#none">서비스 약관,개인정보 보호정책</a>에 동의한 것으로 간주됩니다.</p>
+                        </div>
+                        <div class="etc-sign-in">
+                            <a href="">이미 회원이신가요? 로그인하기</a>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <footer>
+            <div class="footer">
+                <a href="https://www.pinterest.co.kr/">Business 계정 만들기</a>
+            </div>
+        </footer>
+    </body>
+</html>
