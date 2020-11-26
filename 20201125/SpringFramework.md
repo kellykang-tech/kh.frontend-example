@@ -3,6 +3,7 @@
 - [목차](#목차)
 - [1. 용어 정리](#1-용어-정리)
 - [2. 스프링 기본 사용 방법](#2-스프링-기본-사용-방법)
+  - [2.0. 의존성 주입](#20-의존성-주입)
   - [2.1. 컨트롤러](#21-컨트롤러)
     - [2.1.1. Controller](#211-controller)
     - [2.1.2. RestController](#212-restcontroller)
@@ -19,29 +20,31 @@
 
 라이브러리 vs 프레임워크
 
-* 라이브러리: 제어 흐름이 개발자에게 있음 
+- 라이브러리: 제어 흐름이 개발자에게 있음 
   (만들어진 걸 사용을 하는데 어떻게 사용하는지는 개발자가 코드로 만드니까)
-* 프레임워크: 제어 흐름이 프레임워크에 있음
+- 프레임워크: 제어 흐름이 프레임워크에 있음
 
 IoC(Inversion of Control)
-* 제어 역전
+- 제어 역전
   
 스프링의 역할
-* IoC Container
-  * Bean: 스프링에서 관리하는 객체. 라이프사이클이 존재.
-    * Component: 이 어노테이션이 붙으면 스프링이 관리함
-      * Controller
-      * RestController
-      * Service
-      * Repository
-    * 빈을 등록하는 과정
-      * 스프링 프레임워크가 시작되면 등록할 클래스를 탐색해서 (xml, Java Config(annotation)) IoC컨테이너에 등록
-      * 기본적으로 싱글톤임
-  * DI(Dependency Injection): 의존성을 관리해 줌. (빈으로 등록된 친구들만 의존성을 관리해 준다.)
-  * AOP(Aspect-Oriented Programming) 관점지향 프로그래밍
-    * 횡단 관심사(Cross Concern): 모든 레이어에 걸쳐 공통적으로 사용되는 모듈들
-      * 로깅(logging)
-      * 퍼포먼스 측정
+- IoC Container
+  - Bean: 스프링에서 관리하는 객체. 라이프사이클이 존재.
+    - `@Component`: 이 어노테이션이 붙으면 스프링이 관리함
+      - `@Controller`
+      - `@RestController`
+      - `@Service`
+      - `@Repository`
+    - `@Bean`
+      - 주로 외부 라이브러리를 사용할 때 사용함
+    - 빈을 등록하는 과정
+      - 스프링 프레임워크가 시작되면 등록할 클래스를 탐색해서 (xml, Java Config(annotation)) IoC컨테이너에 등록
+      - 기본적으로 싱글톤임
+  - DI(Dependency Injection): 의존성을 관리해 줌. (빈으로 등록된 친구들만 의존성을 관리해 준다.)
+  - AOP(Aspect-Oriented Programming) 관점지향 프로그래밍
+    - 횡단 관심사(Cross Concern): 모든 레이어에 걸쳐 공통적으로 사용되는 모듈들
+      - 로깅(logging)
+      - 퍼포먼스 측정
 
 # 2. 스프링 기본 사용 방법
 
@@ -63,6 +66,12 @@ IoC(Inversion of Control)
 - Repository
   - 저장과 관련된 인터페이스
   - 인터페이스 구현체
+
+## 2.0. 의존성 주입
+
+- 생성자 주입 방식
+- `@Autowired`
+- `@Inject` (deprecated)
 
 ## 2.1. 컨트롤러
 
@@ -293,8 +302,8 @@ public String postpost(@RequestBody User user) {
     <title>사용자 정보 페이지!</title>
 </head>
 <body>
-	<h1>이름: {{name}}<h1/>
-	<h1>메일: {{email}}<h1/>
+	<h1>이름: {{name}}</h1>
+	<h1>메일: {{email}}</h1>
 </body>
 </html>
 ```
